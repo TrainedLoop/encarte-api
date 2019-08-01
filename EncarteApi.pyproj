@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e0c0acc5-0f47-4586-b4b4-578512bafb77}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|venv|$(MSBuildProjectFullPath)</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <CommandLineArguments>run </CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\main\config.py" />
+    <Compile Include="app\main\controller\auth_controller.py" />
+    <Compile Include="app\main\controller\encarte_controller.py" />
+    <Compile Include="app\main\controller\user_controller.py" />
+    <Compile Include="app\main\controller\__init__.py" />
+    <Compile Include="app\main\model\blacklist.py" />
+    <Compile Include="app\main\model\encarte.py" />
+    <Compile Include="app\main\model\user.py" />
+    <Compile Include="app\main\model\__init__.py" />
+    <Compile Include="app\main\service\auth_helper.py" />
+    <Compile Include="app\main\service\blacklist_service.py" />
+    <Compile Include="app\main\service\encarte_service.py" />
+    <Compile Include="app\main\service\user_service.py" />
+    <Compile Include="app\main\service\__init__.py" />
+    <Compile Include="app\main\util\decorator.py" />
+    <Compile Include="app\main\util\dto.py" />
+    <Compile Include="app\main\util\__init__.py" />
+    <Compile Include="app\main\__init__.py" />
+    <Compile Include="app\test\base.py" />
+    <Compile Include="app\test\test_auth.py" />
+    <Compile Include="app\test\test_config.py" />
+    <Compile Include="app\test\test_user_model.py" />
+    <Compile Include="app\test\__init__.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="manage.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app" />
+    <Folder Include="app\main" />
+    <Folder Include="app\main\controller" />
+    <Folder Include="app\main\model" />
+    <Folder Include="app\main\service" />
+    <Folder Include="app\main\util" />
+    <Folder Include="app\test" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="venv\">
+      <Id>venv</Id>
+      <Version>3.7</Version>
+      <Description>venv (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

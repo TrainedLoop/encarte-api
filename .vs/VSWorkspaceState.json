@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\main",
+    "\\app\\main\\controller"
+  ],
+  "SelectedNode": "\\app\\main\\controller\\auth_controller.py",
+  "PreviewInSolutionExplorer": false
+}
