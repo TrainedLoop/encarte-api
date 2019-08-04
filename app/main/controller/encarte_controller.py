@@ -23,7 +23,6 @@ class Encarte(Resource):
 
     @api.doc('list_of_registered_encartes')
     @api.marshal_list_with(_encarte, envelope='data')
-
     def get(self):
         print(request.args)
         return get_encartes()

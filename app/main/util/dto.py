@@ -35,11 +35,14 @@ class EncarteDTO:
     encarte = api.model('create_encarte', {
         #'image': fields.String(required=True),
         'user_id': fields.String(required=True),
+        'id': fields.Integer(required=True),
         'uploaded_by': fields.String(required=True),
         'create_date': fields.Date(required=True),
         'start_date': fields.Date(required=True),
         'end_date': fields.Date(required=True),
-        'brand_id': fields.Date(required=True),
+        'brand_id': fields.String(required=True),
+        'state': fields.String(required=True),
+
 
 
         })

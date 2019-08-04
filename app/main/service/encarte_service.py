@@ -11,7 +11,8 @@ def save_new_encarte(data):
         brand_id=data['brand_id'],
         create_date=datetime.datetime.now(),
         start_date=datetime.datetime.strptime(data['start_date'],"%Y-%m-%dT%H:%M:%S.%fZ"),
-        end_date=datetime.datetime.strptime(data['end_date'],"%Y-%m-%dT%H:%M:%S.%fZ"))
+        end_date=datetime.datetime.strptime(data['end_date'],"%Y-%m-%dT%H:%M:%S.%fZ"),
+        state='NEW')
 
     save_changes(new_encarte)
 

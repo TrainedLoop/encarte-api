@@ -12,6 +12,8 @@ class Encarte(db.Model):
     create_date = db.Column(db.DateTime, nullable=False)
     start_date = db.Column(db.DateTime, nullable=False)
     end_date = db.Column(db.DateTime, nullable=False)
+    state = db.Column(db.String, nullable=False)
+
 
 
 
